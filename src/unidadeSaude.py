@@ -6,6 +6,7 @@ class UnidadeSaude:
         self.__id = id_unidade
         self.__nome = nome
         self.__endereco = endereco
+        self.__ativa = True
 
     @property
     def id(self):
@@ -19,5 +20,17 @@ class UnidadeSaude:
     def endereco(self):
         return self.__endereco
 
-    def atualizar_dados(self):
-        pass
+    @property
+    def ativa(self):
+        return self.__ativa
+
+    def atualizar_dados(self, novo_nome=None, novo_endereco=None):
+        if novo_nome:
+            self.__nome = novo_nome
+        if novo_endereco:
+            self.__endereco = novo_endereco
+        print("Dados da unidade atualizados com sucesso.")
+
+    def desativar(self):
+        self.__ativa = False
+        print(f"Unidade '{self.__nome}' desativada com sucesso.")

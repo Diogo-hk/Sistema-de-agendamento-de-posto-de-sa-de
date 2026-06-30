@@ -1,6 +1,3 @@
-# src/notificacaoFactory.py
-
-
 class NotificacaoFactory:
     def criar_notificacao(self):
         pass

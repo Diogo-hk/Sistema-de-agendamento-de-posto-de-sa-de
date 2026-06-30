@@ -1,6 +1,3 @@
-# src/agenda.py
-
-
 class Agenda:
     def __init__(self, id_agenda, profissional, especialidade, unidade, dias_disponiveis):
         self.__id = id_agenda
@@ -8,6 +5,7 @@ class Agenda:
         self.__especialidade = especialidade
         self.__unidade = unidade
         self.__dias_disponiveis = dias_disponiveis
+        self.__disponivel = True
 
     @property
     def id(self):
@@ -29,8 +27,19 @@ class Agenda:
     def horario(self):
         return self.__dias_disponiveis
 
-    def configurar_horario(self):
-        pass
+    @property
+    def disponivel(self):
+        return self.__disponivel
+
+    def ocupar(self):
+        self.__disponivel = False
+
+    def liberar(self):
+        self.__disponivel = True
+
+    def configurar_horario(self, data):
+        self.__dias_disponiveis = data
+        print("Data alterada com sucesso.")
 
     def bloquear_periodo(self):
         pass

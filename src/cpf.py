@@ -1,11 +1,10 @@
-# src/cpf.py
+
 import re
 
 CPFS_INVALIDOS = {str(d) * 11 for d in range(10)}
 
 
 def is_cpf_valido(cpf):
-    """Retorna True se o CPF no formato brasileiro for válido, False caso contrário."""
     if not isinstance(cpf, str):
         return False
 
@@ -29,7 +28,6 @@ def is_cpf_valido(cpf):
 
 
 def is_cnpj_valido(cnpj):
-    """Retorna True se o CNPJ no formato brasileiro for válido, False caso contrário."""
     if not isinstance(cnpj, str):
         return False
 

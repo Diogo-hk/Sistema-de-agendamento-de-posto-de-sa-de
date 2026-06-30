@@ -1,4 +1,3 @@
-# src/paciente.py
 from src.usuario import Usuario
 
 

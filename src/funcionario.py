@@ -1,4 +1,3 @@
-# src/funcionario.py
 from src.usuario import Usuario
 
 
@@ -8,5 +7,6 @@ class Funcionario(Usuario):
         self._matricula = matricula
         self._cargo = cargo
 
-    def registrar_presenca(self):
-        pass
+    def registrar_presenca(self, consulta):
+        consulta.confirmar()
+        print("Presença confirmada")

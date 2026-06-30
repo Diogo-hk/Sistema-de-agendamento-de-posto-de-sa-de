@@ -1,4 +1,3 @@
-# src/administrador.py
 from src.usuario import Usuario
 from src.unidadeSaude import UnidadeSaude
 
