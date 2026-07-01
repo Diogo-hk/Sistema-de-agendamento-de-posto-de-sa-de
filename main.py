@@ -5,6 +5,7 @@ from src.consulta import Consulta
 from src.unidadeSaude import UnidadeSaude
 from src.agenda import Agenda
 from src.funcionario import Funcionario
+from src.cpf import is_cpf_valido
 from datetime import datetime, date, timedelta
 
 
@@ -49,6 +50,14 @@ def cadastrar_paciente():
     id_usuario = input("Digite o ID: ")
     nome = input("Nome: ")
     cpf = input("CPF: ")
+
+    # RN1.1: valida o dígito verificador do CPF antes de prosseguir
+    if not is_cpf_valido(cpf):
+        print("\n" + "=" * 30)
+        print("Erro: CPF inválido.")
+        print("=" * 30)
+        return
+
     email = input("Email: ")
     telefone = input("Telefone: ")
     senha = input("Senha: ")
